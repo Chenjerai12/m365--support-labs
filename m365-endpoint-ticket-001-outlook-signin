@@ -1,1 +1,42 @@
 
+# Ticket INC001001 - Outlook Sign-in Failure - Sarah Moyo (Finance)
+
+## Issue
+User cannot access Outlook desktop. Finance dept, high priority.
+
+## My Troubleshooting (L2 Flow)
+
+**1. Scope: Desktop vs Account**
+- Tested Outlook Web (OWA) at portal.office.com - WORKS = Account is OK, issue is desktop
+- Key L2 skill: Isolating desktop vs account issues
+
+**2. Service Health Check**
+- M365 Admin Centre > Health > Service Health
+- Exchange Online = Healthy = Not a service outage
+
+**3. Account Check - Entra ID**
+- Entra ID > Users > Sarah Moyo > Account Enabled
+- MFA: Verified multi-factor authentication status
+- Sign-in Logs: Checked for failure reason
+
+**4. Desktop Fix**
+- Credential Manager > Removed Office credentials
+- Outlook profile repair
+
+**5. ITSM Documentation**
+- Documented from incident to resolution
+
+## Technologies Used (From Ticket)
+- Outlook: Desktop email troubleshooting
+- Exchange Online: Email service connectivity
+- Microsoft 365 Admin Centre: Service Health investigation
+- MFA: Multi-factor authentication
+- Outlook Web: Isolating desktop vs account issues
+- ITSM: Incident documentation and resolution
+
+## KQL Query Used
+```kql
+SigninLogs
+| where UserDisplayName == "Sarah Moyo"
+| where Result != 0
+| project TimeGenerated, ResultDescription, AppDisplayName, IPAddress
