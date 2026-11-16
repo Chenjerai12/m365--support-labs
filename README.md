@@ -3,7 +3,7 @@ M365 L2 Endpopint Labs I Entra ID , Exchange , Intune, Teams, One drive, Conditi
 # M365 & Azure L2 Support Labs | 8+ Production Tickets
 
 **Endpoint Support | Entra ID | Intune | Exchange Online | Conditional Access | KQL**
-*Lab by Chenjerai - Kimberley, aiming for L2 Support JHB - R22k*
+*Lab by Chenjerai - JHB, aiming for L2 Support JHB 
 
 ## What This Repo Proves
 I can fix real M365 tickets end-to-end: Scope > Sign-in Logs > KQL > Fix > Verify > ITSM Documentation
